@@ -15,24 +15,27 @@ Num1 = int(input("Enter your first number: "))
 Num2 = int(input("Enter your second number: "))
 
 choice = str(input("Enter your choice: /n"))
-print("+ - * / % ^")
+print("| + | - | * | / | % | ^ |")
 
 if choice == '+':
     print(Num1 + " + " +  Num2 + " = ")
 
-if choice == '-':
+elif choice == '-':
     print(Num1 + " - " + Num2 + " = ")
     
-if choice == '*':
+elif choice == '*':
     print(Num1 + " * " +  Num2 + " = ")
     
-if choice == '/':
+elif choice == '/':
     print(Num1 + " / " +  Num2 + " = ")
 
-if choice == '^':
+elif choice == '^':
     print(Num1 + " ^ " +  Num2 + " = ")
 
-if choice == '%':
+elif choice == '%':
     print(Num1 + " % " +  Num2 + " = ")
+
+else:
+    print("Something went wrong")
 
     
