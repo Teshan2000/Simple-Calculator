@@ -16,30 +16,39 @@ def Power(x,y):
 def Remainder(x,y):
     return x % y
 
-i = "Want to terminate?"
+def select_option(choice):
+    if choice == '#':
+        exit()
+    
+    if choice == '$':
+        return -1
+
+
+#i = "Want to terminate?"
 
 Num1 = int(input("Enter your first number: "))
 Num2 = int(input("Enter your second number: "))
 
-while(Num1 or Num2 != 0 and i<5):
         
-    print("| + | - | * | / | % | ^ |")
-    choice = str(input("Enter your choice: \n"))
+print("| + | - | * | / | % | ^ |")
+choice = str(input("Enter your choice: \n"))
 
-    #ans = "Your answer is {}"
-    #print(ans.format())
+#ans = "Your answer is {}"
+#print(ans.format())
 
-    print(i)
+#print(i)
 
+def calculations(choice):
+        
     if choice == '+':
         print(Num1, " + ", Num2, " = ", add(Num1,Num2))
 
     elif choice == '-':
         print(Num1, " - ", Num2, " = ", subtract(Num1,Num2))
-        
+            
     elif choice == '*':
         print(Num1, " * ", Num2, " = ", multiply(Num1,Num2))
-        
+            
     elif choice == '/':
         print(Num1, " / ", Num2, " = ", divide(Num1,Num2))
 
@@ -52,5 +61,6 @@ while(Num1 or Num2 != 0 and i<5):
     else:
         print("Something went wrong")
 
-    
-    
+        
+if (Num1 or Num2 != 0):
+    calculations()
