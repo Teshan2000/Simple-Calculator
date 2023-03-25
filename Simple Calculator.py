@@ -8,7 +8,10 @@ def multiply(x,y):
     return x * y
 
 def divide(x,y):
-    return x / y
+    try:
+        return x / y
+    except Exception as e:
+        print(e)
 
 def Power(x,y):
     return x ** y
