@@ -21,28 +21,34 @@ def Remainder(x,y):
 
 def select_option(choice):
     if choice == '#':
+        print("~Terminated~")
         exit()
     
     if choice == '$':
         return -1
 
 
-#i = "Want to terminate?"
-
 Num1 = int(input("Enter your first number: "))
 Num2 = int(input("Enter your second number: "))
 
         
-print("| + | - | * | / | % | ^ |")
+print("Select operation:")
+print("1.Add      : + ")
+print("2.Subtract : - ")
+print("3.Multiply : * ")
+print("4.Divide   : / ")
+print("5.Power    : ^ ")
+print("6.Remainder: % ")
+print("7.Terminate: # ")
+print("8.Reset    : $ ")
+
 choice = str(input("Enter your choice: \n"))
 
 #ans = "Your answer is {}"
 #print(ans.format())
+     
+while (Num1 or Num2 != 0):
 
-#print(i)
-
-def calculations(choice):
-        
     if choice == '+':
         print(Num1, " + ", Num2, " = ", add(Num1,Num2))
 
@@ -64,6 +70,4 @@ def calculations(choice):
     else:
         print("Something went wrong")
 
-        
-if (Num1 or Num2 != 0):
-    calculations()
+   
