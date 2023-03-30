@@ -35,7 +35,6 @@ def select_option(choice):
 
             Num2 = int(input("Enter your second number: "))
             print(Num2)
-
             
             if choice == '+':
                 print(Num1, " + ", Num2, " = ", add(Num1,Num2))
@@ -56,7 +55,9 @@ def select_option(choice):
                 print(Num1, " % ", Num2, " = ", Remainder(Num1,Num2))
 
             else:
-                print("Something went wrong")
+                print("~Something went wrong~")
+    else: 
+        print("~Unrecognized operation~")
 
 while(True):
 
@@ -71,10 +72,12 @@ while(True):
     print("8.Reset    : $ ")
 
     choice = str(input("Enter your choice: \n"))
-    
+    print(choice)  
+    if(select_option(choice) == -1):
+        print("Done. Terminating")
+        exit()
 
-
-print("----------------------------------------------")
+    print("----------------------------------------------")
 
 
    
