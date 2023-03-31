@@ -20,14 +20,14 @@ def Remainder(x,y):
     return x % y
 
 def select_option(choice):
-    if (choice=='#'):
+    '''if (choice=='#'):
         print("~Terminated~")
-        exit()
+        exit()'''
 
-    elif (choice=='$'):
-        exit()
+    '''elif (choice=='$'):
+        exit()'''
 
-    elif (choice in '+','-','*','/','^','%'):
+    if (choice in '+','-','*','/','^','%'):
         while (True):
             
             Num1 = int(input("Enter your first number: "))
@@ -72,9 +72,12 @@ while(True):
     print("8.Reset    : $ ")
 
     choice = str(input("Enter your choice: \n"))
-    print(choice)  
-    if(select_option(choice) == -1):
-        print("Done. Terminating")
+    
+    if(select_option(choice) == '#'):
+        print("~Terminated~")
+        exit()
+    elif(select_option(choice) == '$'):
+        print("~Reset~")
         exit()
 
     print("----------------------------------------------")
