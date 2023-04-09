@@ -20,12 +20,12 @@ def Remainder(x,y):
     return x % y
 
 def select_option(choice):
-    '''if (choice=='#'):
+    if (choice=='#'):
         print("~Terminated~")
-        exit()'''
+        exit()
 
-    '''elif (choice=='$'):
-        exit()'''
+    elif (choice=='$'):
+        exit()
 
     if (choice in '+','-','*','/','^','%'):
         while (True):
