@@ -22,44 +22,59 @@ def Remainder(x,y):
 def select_option(choice):
     if (choice=='#'):
         print("~Terminated~")
-        exit()
-
+        
     elif (choice=='$'):
-        exit()
+        print("~Reset~")
 
-    if (choice in '+','-','*','/','^','%'):
+    elif (choice in ('+','-','*','/','^','%')):
         while (True):
             
-            Num1 = int(input("Enter your first number: "))
-            print(Num1)
-
-            Num2 = int(input("Enter your second number: "))
-            print(Num2)
+            Num1s = str(input("Enter your first number: "))
+            print(Num1s)
             
-            if choice == '+':
-                print(Num1, " + ", Num2, " = ", add(Num1,Num2))
+            try:
+                Num1 = float(Num1s)
+                break
+            except:
+                print("Not a valid number,please enter again")
+                continue
 
-            elif choice == '-':
-                print(Num1, " - ", Num2, " = ", subtract(Num1,Num2))
-                    
-            elif choice == '*':
-                print(Num1, " * ", Num2, " = ", multiply(Num1,Num2))
-                    
-            elif choice == '/':
-                print(Num1, " / ", Num2, " = ", divide(Num1,Num2))
+        while (True):
+            Num2s = str(input("Enter your second number: "))
+            print(Num2s)
 
-            elif choice == '^':
-                print(Num1, " ^ ", Num2, " = ", Power(Num1,Num2))
+            try:
+                Num2 = float(Num2s)
+                break
+            except:
+                print("Not a valid number,please enter again")
+                continue          
+           
+            
+        if choice == '+':
+            print(Num1, "+", Num2, "=", add(Num1,Num2))
 
-            elif choice == '%':
-                print(Num1, " % ", Num2, " = ", Remainder(Num1,Num2))
+        elif choice == '-':
+            print(Num1, "-", Num2, "=", subtract(Num1,Num2))
+                        
+        elif choice == '*':
+            print(Num1, "*", Num2, "=", multiply(Num1,Num2))
+                        
+        elif choice == '/':
+            print(Num1, "/", Num2, "=", divide(Num1,Num2))
 
-            else:
-                print("~Something went wrong~")
+        elif choice == '^':
+            print(Num1, "^", Num2, "=", Power(Num1,Num2))
+
+        elif choice == '%':
+            print(Num1, "%", Num2, "=", Remainder(Num1,Num2))
+
+        else:
+            print("~Something went wrong~")
     else: 
         print("~Unrecognized operation~")
 
-while(True):
+while True:
 
     print("Select operation:")
     print("1.Add      : + ")
