@@ -19,35 +19,51 @@ def Power(x,y):
 def Remainder(x,y):
     return x % y
 
+
 def select_option(choice):
     if (choice=='#'):
-        print("~Terminated~")
+        return 1
         
     elif (choice=='$'):
         print("~Reset~")
+        return 0
 
     elif (choice in ('+','-','*','/','^','%')):
         while (True):
             
             Num1s = str(input("Enter your first number: "))
             print(Num1s)
+
+            if (Num1s=='#'):
+                return 1
+        
+            if (Num1s=='$'):
+                print("~Reset~")
+                return 0
             
             try:
                 Num1 = float(Num1s)
                 break
             except:
-                print("Not a valid number,please enter again")
+                print("~Not a valid number, Please enter again~")
                 continue
 
         while (True):
             Num2s = str(input("Enter your second number: "))
             print(Num2s)
 
+            if (Num2s=='#'):
+                return 1
+        
+            if (Num2s=='$'):
+                print("~Reset~")
+                return 0
+
             try:
                 Num2 = float(Num2s)
                 break
             except:
-                print("Not a valid number,please enter again")
+                print("~Not a valid number, Please enter again~")
                 continue          
            
             
@@ -74,7 +90,7 @@ def select_option(choice):
     else: 
         print("~Unrecognized operation~")
 
-while True:
+while (True):
 
     print("Select operation:")
     print("1.Add      : + ")
@@ -88,14 +104,11 @@ while True:
 
     choice = str(input("Enter your choice: \n"))
     
-    if(select_option(choice) == '#'):
+    if(select_option(choice) == 1):
         print("~Terminated~")
         exit()
-    elif(select_option(choice) == '$'):
-        print("~Reset~")
-        exit()
-
-    print("----------------------------------------------")
+    
+    print("----------------------------------------------\n")
 
 
    
