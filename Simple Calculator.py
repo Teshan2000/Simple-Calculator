@@ -1,3 +1,5 @@
+past_calculations = []
+
 def add(x,y):
     return x + y
 
@@ -87,6 +89,10 @@ def select_option(choice):
 
         else:
             print("~Something went wrong~")
+
+        past_calculation = "{0} {1} {2} = {3}".format(num1, choice, num2, result)
+        print(past_calculation)
+
     else: 
         print("~Unrecognized operation~")
 
