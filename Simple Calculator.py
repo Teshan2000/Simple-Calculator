@@ -22,6 +22,14 @@ def Remainder(x,y):
     return x % y
 
 
+def history():
+    if past_calculations:
+        for index, calc in enumerate(past_calculations):
+            print(calc)
+    else:
+        print("No past calculations to show")
+        return 0
+
 def select_option(choice):
     if (choice=='#'):
         return 1
@@ -90,8 +98,8 @@ def select_option(choice):
         else:
             print("~Something went wrong~")
 
-        past_calculation = "{0} {1} {2} = {3}".format(num1, choice, num2, result)
-        print(past_calculation)
+        last_calculation = "{0} {1} {2} = {3}".format(num1, choice, num2, result)
+        print(last_calculation)
 
     else: 
         print("~Unrecognized operation~")
