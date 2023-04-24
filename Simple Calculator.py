@@ -76,7 +76,9 @@ def select_option(choice):
                 print("~Not a valid number, Please enter again~")
                 continue          
            
-            
+        Result = 0.0
+        last_calculation = ""
+
         if choice == '+':
             print(Num1, "+", Num2, "=", add(Num1,Num2))
 
@@ -98,8 +100,10 @@ def select_option(choice):
         else:
             print("~Something went wrong~")
 
-        last_calculation = "{0} {1} {2} = {3}".format(num1, choice, num2, result)
+        last_calculation = "{0} {1} {2} = {3}".format(Num1, choice, Num2, Result)
+        #print("Previous Calculations are,")
         print(last_calculation)
+        past_calculations.append(last_calculation)
 
     else: 
         print("~Unrecognized operation~")
