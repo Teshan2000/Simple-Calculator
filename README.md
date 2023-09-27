@@ -1,16 +1,17 @@
 <h1 align="center"> Simple Calculator </h1><br>
-<ol type="disc">
-    <li>A simple calculator made using Python functions</li>
-    <li>Calculator also can display past calculations</li>
-    <li>The Calcutor can be used to calculate,</li>
-    <ol type="1">
-        <li>Addition (+)<li>
-        <li>Subtraction (-)<li>
-        <li>Multiplication (*)<li>
-        <li>Division (/)<li>
-        <li>Power (^)<li>
-        <li>Remainder (%)<li>
-    </ol>
-</ol>
+<ul type="disc">
+    <li>A simple calculator made using Python functions</li><br>
+    <li>The Calcutor can be used to calculate,</li>    
+        1. Addition (+)<br>
+        2. Subtraction (-)<br>
+        3. Multiplication (*)<br>
+        4. Division (/)<br>
+        5. Power (^)<br>
+        6. Remainder (%)<br> <br>    
+    <!-- <li>Calculator also can display past calculations</li><br>  -->
+    <li>It also includes other options include,</li>
+        1. Terminate (#)<br>
+        2. Reset ($)<br>
+</ul>
 <br>
 
